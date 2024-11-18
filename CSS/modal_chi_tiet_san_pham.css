@@ -1,0 +1,205 @@
+
+  /* Cấu hình CSS cho modal */
+  #chitiet_sp {
+  max-width: 90%; 
+  max-height: 600px;
+  top: 30px;
+}
+
+@media(max-width:1110px){
+  #chitiet_sp {
+    top: 60px;
+  }
+}
+  .modal-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  
+  .myformm {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+    padding:0;
+  }
+  #content-header-product{
+    padding:5px;
+
+  }
+  #content-product{
+    padding: 1px;
+  }
+  
+  /* Cho phép các phần tử trong modal co giãn theo tỷ lệ */
+  .modal-product-name,
+  .modal-product-price,
+  .modal-product-description {
+    flex: 1 1 100%;
+    word-wrap: break-word; 
+  }
+  
+  /* Đảm bảo các phần tử hình ảnh trong modal không bị co kéo */
+  .modal-product-image {
+    width: 100%;
+    max-width: 300px; 
+    height: 100%;
+    object-fit: contain;
+  }
+  
+  /* Media queries cho màn hình nhỏ */
+  @media (max-width: 768px) {
+    .modal-dialog {
+      width: 100%; 
+      margin: 0;
+    }
+  
+    .myformm {
+      flex-direction: column; 
+      gap: 10px;
+    }
+  
+    .modal-product-name,
+    .modal-product-price,
+    .modal-product-description {
+      flex: 1 1 100%; 
+    }
+  
+    .modal-product-image {
+      width: 100%; 
+      max-width: none; 
+    }
+  }
+
+  @media (max-width: 480px) {
+    .modal-content {
+      padding: 10px;
+    }
+  
+    .modal-product-price,
+    .modal-product-description {
+      font-size: 14px; 
+    }
+  
+    .add-to-cart-btn {
+      padding: 10px 15px; 
+    }
+  }
+  
+
+/* Cấu hình cho phần header của modal */
+.content-header {
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center;
+    position: relative;
+  }
+  
+  .content-header h5 {
+    margin: 0; 
+  }
+  
+  #dong_modal {
+    cursor: pointer; 
+    font-size: 1.5em; 
+    color: #333;
+    right:0; 
+    position: absolute;
+  }
+  
+
+  .add-to-cart-btnn {
+    width: 100%; 
+    padding: 10px; 
+    font-size: 15px; 
+    text-align: center;
+    border: none; 
+    background-color: #7d5d4d;
+    color: white; 
+    cursor: pointer;
+    border-radius: 5px; 
+  }
+  
+
+  #productModal .modal-body {
+  padding: 20px;
+}
+
+#productModal .modal-body form label {
+  font-weight: bold;
+  margin-top: 1rem;
+}
+
+#modal-color-select,
+#quantity-select {
+  margin-top: 1rem;
+}
+
+#total-price {
+  margin-top: 1rem;
+  font-weight: bold;
+}
+
+.add-to-cart-btnn {
+  width: 100%;
+  margin-top: 1rem;
+}
+
+/* Đặt modal-body để padding gọn gàng */
+#productModal .modal-body {
+  padding: 20px;
+}
+
+/* Đảm bảo ảnh sản phẩm được căn giữa */
+#productModal .modal-body .col-6 img {
+  display: block;
+  margin: 0 auto;
+  max-width: 100%;
+  max-height: 100%; 
+}
+
+/* Đảm bảo khung bên trái căn giữa theo chiều dọc */
+#productModal .modal-body .col-6 {
+  display: flex;
+  align-items: center; 
+  justify-content: center; 
+  height: 100%; 
+}
+
+/* Khoảng cách giữa các nhãn, ô chọn và nút */
+#productModal label {
+  display: block;
+  font-weight: bold;
+  margin-top: 1rem;
+}
+
+#modal-color-select,
+#quantity-select {
+  margin-top: 1rem;
+}
+#total-price {
+  color: blue; 
+}
+
+.add-to-cart-btnn{
+  margin-top: -10px;
+}
+
+.add-to-cart-btnn {
+  width: 100%;
+  background-color: #7d5d4d;
+  border-radius: 5px;
+  padding: 0.5em 0;
+  color: #fff;
+  border: 1px solid transparent;
+  transition: box-shadow 0.3s, border-color 0.3s;
+}
+
+.add-to-cart-btnn:hover {
+  background-color: #7d5d4d;
+  color: #fff;
+  border-color: #fff; 
+  box-shadow: 0 0 15px rgba(206, 122, 81, 0.8),0 0 15px rgba(141, 109, 94, 0.8); 
+}

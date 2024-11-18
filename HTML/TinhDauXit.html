@@ -1,0 +1,811 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tinh Dầu Xịt</title>
+    <link rel="stylesheet" href="../CSS/bootstrap.min.css">
+    <link rel="stylesheet" href="../CSS/header.css">
+    <link rel="stylesheet" href="../CSS/footer.css">
+    <link rel="stylesheet" href="../CSS/modal_dk.css">
+    <link rel="stylesheet" href="../CSS/modal_dn.css">
+    <link rel="stylesheet" href="../CSS/sanpham.css">
+    <link rel="stylesheet" href="../CSS/modal_chi_tiet_san_pham.css">
+    <script src="../JS/jquery-3.7.1.min.js"></script>
+    <script src="../JS/bootstrap.bundle.min.js"></script>
+    <script src="../JS/nav.js"></script>
+    <script src="../JS/table.js"></script>
+    <script src="../JS/passwordToggle.js"></script>
+    <script src="../JS/login.js"></script>
+    <script src="../JS/createAccount.js"></script>
+    <script src="../JS/modalSwitch.js"></script>
+</head>
+<body>
+  <!-- header -->
+  <div class="container-header">
+    <div class="banner row text-center text-white mb-0">
+      <a id="shop-link" href="home.html" style="text-decoration: none;">
+        <p class="text-white mt-1">Đặt hàng ngay tại:
+            <span id="shop-name" class="text-white mt-1 fw-bold">Aura Candle</span>
+            <i class="bi bi-arrow-right text-white"></i>
+        </p>
+      </a>
+    </div>
+    <div class="top-nap row">
+      <div class="row">
+        <div class="col-6 logo mt-2 pt-1 justify-content-center d-flex">
+          <h4 class="text-uppercase text-center fw-bold">
+            <a href="home.html" class="logo-link">aura candle</a>
+          </h4>
+        </div>
+
+        <div class="col-6 icon d-flex justify-content-end pt-2">
+          <div class="input-group d-none d-md-flex">
+            <input type="text" class="form-control" placeholder="Search for candles..." aria-label="Search for candles" aria-describedby="searchIcon">
+            <span class="input-group-text" id="searchIcon">
+              <img src="../IMAGES/timkiem.png" alt="Search" id="timkiem" style="width: 20px; height: 20px;">
+            </span>
+          </div>
+
+          <i class="d-none d-md-inline mx-2">
+            <a href="#"><img src="../IMAGES/dangnhap.png" alt="Login" id="nutdangnhap" style="width: 30px; height: 40px;"></a>
+          </i>
+          <i class="d-none d-md-inline mx-2">
+            <a href="Bag.html"><img src="../IMAGES/giohang.jpg" alt="Cart" id="giohang" style="width: 40px; height: 40px;"></a>
+          </i>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <nav class="navbar navbar-expand-lg" id="navbar-bottom">
+    <div class="container-fluid">
+      <div class="row align-items-center">
+        <div class="col-1 mx-3 custom-padding">
+          <button class="navbar-toggler" type="button" data-bs-toggle="modal" data-bs-target="#navbarModal" aria-controls="navbarModal" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        </div>
+        <div class="col-6 custom-padding">
+          <div class="input-group d-block d-md-none" id="searchBar" style="flex-grow: 1; margin-top: 0;">
+            <input type="search" class="form-control" placeholder="Search..." aria-label="Search" style="width: 520px; margin: 0;">
+          </div>
+        </div>
+      </div>
+  
+      <div class="nav collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav m-auto mb-2 mb-lg-0">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="holidayDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              NẾN THƠM
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="holidayDropdown">
+              <li><a class="dropdown-item" href="../HTML/Nenhu.html">NẾN HŨ</a></li>
+              <li><a class="dropdown-item" href="../HTML/NenLyTron.html">NẾN LY TRÒN</a></li>
+              <li><a class="dropdown-item" href="../HTML/NenLyVuong.html">NẾN LY VUÔNG</a></li>
+              <li><a class="dropdown-item" href="../HTML/NenMini.html">NẾN MINI</a></li>
+            </ul>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="begddingDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              TINH DẦU
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="begddingDropdown">
+              <li><a class="dropdown-item" href="../HTML/TinhDauXit.html">TINH DẦU XỊT</a></li>
+              <li><a class="dropdown-item" href="../HTML/TinhDauGel.html">TINH DẦU DẠNG GEL</a></li>
+            </ul>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="rugsDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              SET QUÀ
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="rugsDropdown">
+              <li><a class="dropdown-item" href="../HTML/SetQua2Nen.html">SET QUÀ 2 NẾN</a></li>
+              <li><a class="dropdown-item" href="../HTML/SetQua3Nen.html">SET QUÀ 3 NẾN</a></li>
+
+            </ul>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link" href="../HTML/PhuKien.html">PHỤ KIỆN</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link" href="../HTML/Sale.html">SALE</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link" href="../HTML/GioiThieu.html">GIỚI THIỆU</a>
+          </li>
+          
+        </ul>
+      </div>
+    </div>
+  </nav>
+  
+  <div class="modal fade" id="navbarModal" tabindex="-1" aria-labelledby="navbarModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-fullscreen">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 class="modal-title mx-3" id="navbarModalLabel" style="color: #504f4f;" >MENU</h2>
+                <button type="button" class="btn-close " data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <ul class="navbar-nav">
+                  <li class="nav-item">
+                      <a class="nav-link toggle-menu" href="javascript:void(0);">NẾN THƠM</a>
+                      <ul class="submenu">
+                          <li><a class="nav-link" href="../HTML/Nenhu.html">Nến Hũ</a></li>
+                          <li><a class="nav-link" href="../HTML/NenLyTron.html">Nến Ly Tròn</a></li>
+                          <li><a class="nav-link" href="../HTML/NenLyVuong.html">Nến Ly Vuông</a></li>
+                          <li><a class="nav-link" href="../HTML/NenMini.html">Nến Mini</a></li>
+                      </ul>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link toggle-menu" href="javascript:void(0);">TINH DẦU</a>
+                      <ul class="submenu">
+                          <li><a class="nav-link" href="../HTML/TinhDauXit.html">Tinh Dầu Xịt</a></li>
+                          <li><a class="nav-link" href="../HTML/TinhDauGel.html">Tinh Dầu Gel</a></li>
+                      </ul>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link toggle-menu" href="javascript:void(0);">SET QUÀ</a>
+                      <ul class="submenu">
+                          <li><a class="nav-link" href="../HTML/SetQua2Nen.html">Set Quà 2 Nến</a></li>
+                          <li><a class="nav-link" href="../HTML/SetQua3Nen.html">Set Quà 3 Nến</a></li>
+                      </ul>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" href="../HTML/PhuKien.html">PHỤ KIỆN</a>
+                  </li>
+                  <li class="nav-item"><a class="nav-link" href="../HTML/Sale.html">SALE</a></li>
+                  <li class="nav-item"><a class="nav-link" href="../HTML/GioiThieu.html">GIỚI THIỆU</a></li>
+              </ul>
+          </div>
+          
+          
+        </div>
+    </div>
+  </div>
+<!-- table đăng kí, đăng nhập -->
+<div id="loginTable" class="d-none">
+  <div class="table-container" style="position: absolute; top: 50px; right: 0;">
+    <h5 class="table-title" style="color: #ff5100;">WELCOME</h5>
+    <div class="row">
+      <tr>
+        <td><a href="#" id="dangnhap">Đăng nhập</a></td>
+      </tr>
+    </div>
+    <div class="row">
+      <tr>
+        <td>
+          <a href="#" id="dangky">Tạo tài khoản</a>
+          </td>
+      </tr>
+    </div>
+  </div>
+</div>
+
+<!-- modal đăng kí -->
+<div class="row">
+        
+  <div class="modal fade" id="createAccountModal" tabindex="-1" aria-labelledby="ModalFormLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content" id="register-modal-content">
+          <div class="modal-body" id="register-modal-body">
+              <button type="button" class="btn-close " id="dong_dk" data-bs-dismiss="modal" aria-label="Close"></button>
+              <div class="myform bg-white">
+                  <h1 class="text-center text-uppercase ">CREATE ACCOUNT</h1>
+              
+                  <form id="registerForm">
+                    <div class="mb-3 mt-5">
+                        <label for="exampleInputFirstName" class="form-label">First Name</label>
+                        <input type="text" class="form-control" id="exampleInputFirstName" aria-describedby="firstNameError">
+                        <span id="firstNameError" class="error-message" style="color: red;"></span>
+                    </div>
+                    <div class="mb-3 mt-4">
+                        <label for="exampleInputLastName" class="form-label">Last Name</label>
+                        <input type="text" class="form-control" id="exampleInputLastName" aria-describedby="lastNameError">
+                        <span id="lastNameError" class="error-message" style="color: red;"></span> 
+                    </div>
+                    <div class="mb-3 mt-4">
+                        <label for="exampleInputEmail" class="form-label">Email Address</label>
+                        <input type="email" class="form-control" id="exampleInputEmail" aria-describedby="emailError">
+                        <span id="emailError" class="error-message" style="color: red;"></span> 
+                    </div>
+                    <div class="mb-3 mt-4">
+                        <label for="exampleInputPassword" class="form-label">Password</label>
+                        <input type="password" class="form-control" id="exampleInputPassword" aria-describedby="passwordError">
+                        <span id="passwordError" class="error-message" style="color: red;"></span> 
+                        <span onclick="togglePassword('exampleInputPassword', 'togglePasswordIcon')" class="eye-icon1" style="cursor: pointer;">
+                            <img src="../IMAGES/modal/eyeOpen.png" id="togglePasswordIcon" alt="Toggle Password">
+                        </span>
+                    </div>
+                    <button type="submit" class="btn mt-4" style="background-color:orangered;">CREATE ACCOUNT</button>
+                    <p class="p_modal" style="font-size: 15px;">Already have an account?<a href="#" class="modal_link_login">Sign in</a></p>
+                </form>
+              </div>
+          </div>
+        </div>
+      </div>
+  </div>
+</div>
+<!-- modal đăng nhập -->   
+<div class="row">    
+<div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="ModalFormLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content" id="register-modal-content">
+        <div class="modal-body" id="register-modal-body">
+            <button type="button" class="btn-close" id="dong_dn" data-bs-dismiss="modal" aria-label="Close"></button>
+            <div class="myform bg-white">
+                <h1 class="text-center text-uppercase">Sign in</h1>
+                <form id="loginForm">
+                    <div class="mb-3 mt-5">
+                        <label for="exampleInputEmail1" class="form-label">Email Address</label>
+                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                        <span id="emailError" class="text-danger error-message" style="color: red;"></span> 
+                    </div>
+                    <div class="mb-3">
+                        <label for="exampleInputPassword1" class="form-label">Password</label>
+                        <input type="password" class="form-control" id="exampleInputPassword1">
+                        <span onclick="togglePassword('exampleInputPassword1', 'togglePasswordIcon1')" class="eye-icon" style="cursor: pointer;">
+                          <img src="../IMAGES/modal/eyeOpen.png" id="togglePasswordIcon1" alt="Toggle Password" >
+                        </span>
+                        <span id="passwordError" class="text-danger error-message" style="color: red;"></span> 
+                        <p class="mt-1 text-end" style="font-size: 12px;">Forgot password?
+                            <a href="#">Reset</a>
+                        </p>
+                    </div>
+                    <button type="submit" class="btn mt-4" style="background-color:orangered;">LOGIN</button>
+                    <p style="font-size: 14px;">Not an insider yet? <a href="#" class="modal_link_createAccount">Sign up for an account</a></p>
+                    
+                    <div id="loginMessage" class="text-center mt-3 text-success"></div>
+                  </form>
+            </div>
+        </div>
+      </div>
+    </div>
+</div>
+</div>
+    
+  
+
+<!-- danh sách sản phẩm -->
+<div class="content">
+    <div class="row">
+        <div id="carouselExampleIndicators" class="carousel slide">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+            <img src="https://bizweb.dktcdn.net/thumb/2048x2048/100/293/212/collections/banner-danh-muc-san-pham-tinh-dau-xit.jpg?v=1645438421217" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+            <img src="https://kodo.vn/wp-content/uploads/elementor/thumbs/Tinh-dau-Dinh-cao-huong-thom-khong-gian-qu6egb3q8qs0gndo59ocoksubt5ye0mqfks037r9cg.jpg" class="d-block w-100" alt="...">
+            </div>
+
+            <div class="carousel-item">
+                <img src="https://i.ytimg.com/vi/k8Upfxc9HF0/hq720.jpg?sqp=-oaymwE7CK4FEIIDSFryq4qpAy0IARUAAAAAGAElAADIQj0AgKJD8AEB-AH-CYAC0AWKAgwIABABGCUgXyh_MA8=&rs=AOn4CLB3RdVxv9_W2P8ShjUDeKw_15LaVg" class="d-block w-100" alt="...">
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+        </div>
+    </div>
+    <div class="row pt-3 pb-5">
+    <div class="h2 text-center line-heading" style="font-size: 24px; font-weight: bold; margin-bottom: 20px; color: rgb(232, 74, 100);">
+      TINH DẦU DẠNG XỊT
+    </div>
+    </div>
+    <div class="product-list" >
+        <div class="row px-5 g-5 ">
+
+            <div class="col-3 col-md-3 px-2 ">
+                <div class="product-item horizontal-product-item" data-category="1000" data-price="15" data-name="Tinh Dầu Xịt Phòng Bạc Hà">
+                    <div class="product-image">
+                        <img src="https://product.hstatic.net/200000485529/product/xit-bac-ha_982f615bc916453fb1a707a8c7e70e02_master.jpg" class="main-img">
+                        </div>
+                    <h2 class="product-name horizontal-product-item text-start text-uppercase" style="color: rgb(0, 170, 255);">Tinh Dầu Xịt Phòng Bạc Hà</h2>
+                    <p class="chi_tiet_sp"  style="display:block;">sản phẩm tạo hương thơm tự nhiên, mang lại cảm giác tươi mát, sảng khoái.
+                    </p>
+                    <div class="row justify-content-between align-items-center">
+                    <div class="rating">
+                      <span class="star filled">&#9733;</span>
+                      <span class="star filled">&#9733;</span>
+                      <span class="star filled">&#9733;</span>
+                      <span class="star filled">&#9733;</span>
+                      <span class="star filled">&#9733;</span>
+                      <span class="review-count">(121 reviews)</span>
+                    </div>
+                    <div class="col-12 col-md-12">
+                      <p class="product-price mt-3 text-start ">$15
+                        <button class="view-details-btn " onclick="openModal(this)"><img src="../IMAGES/archiveSale/giohang.png" alt="" width="30px" height="30px"></button>
+                      </p>
+                      <label for="color-select-1" style="display:none;">Chọn dung tích:</label>
+                      <select id="color-select-1" style="display:none;">
+                          <option value="100ml">100ml</option>
+                          <option value="200ml">200ml</option>
+                          <option value="300ml">300ml</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+
+
+
+              <div class="col-3 col-md-3 px-2 ">
+                <div class="product-item horizontal-product-item" data-category="1000" data-price="15" data-name="Tinh Dầu Xịt Phòng Bưởi">
+                    <div class="product-image">
+                        <img src="https://product.hstatic.net/200000485529/product/xit-buoi-hong_b7c92eda236b4627a332c58e59eba9b2_master.jpg" class="main-img">
+                        </div>
+                    <h2 class="product-name horizontal-product-item text-start text-uppercase" style="color: rgb(0, 170, 255);">Tinh Dầu Xịt Phòng Bưởi</h2>
+                    <p class="chi_tiet_sp"  style="display:block;">sản phẩm tạo hương thơm tự nhiên, mang lại cảm giác tươi mát, sảng khoái.
+                    </p>
+                    <div class="row justify-content-between align-items-center">
+                    <div class="rating">
+                      <span class="star filled">&#9733;</span>
+                      <span class="star filled">&#9733;</span>
+                      <span class="star filled">&#9733;</span>
+                      <span class="star filled">&#9733;</span>
+                      <span class="star">&#9733;</span>
+                      <span class="review-count">(17 reviews)</span>
+                    </div>
+                    <div class="col-12 col-md-12">
+                      <p class="product-price mt-3 text-start ">$15
+                        <button class="view-details-btn " onclick="openModal(this)"><img src="../IMAGES/archiveSale/giohang.png" alt="" width="30px" height="30px"></button>
+                      </p>
+                      <label for="color-select-1" style="display:none;">Chọn dung tích:</label>
+                      <select id="color-select-1" style="display:none;">
+                          <option value="100ml">100ml</option>
+                          <option value="200ml">200ml</option>
+                          <option value="300ml">300ml</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+
+
+              <div class="col-3 col-md-3 px-2 ">
+                <div class="product-item horizontal-product-item" data-category="1000" data-price="15" data-name="Tinh Dầu Xịt Phòng Hoa Hồng">
+                    <div class="product-image">
+                        <img src="https://product.hstatic.net/200000485529/product/xit-hoa-hong_0c2d2aa0c5084402b62cbf0562eea24c_master.jpg" class="main-img">
+                        </div>
+                    <h2 class="product-name horizontal-product-item text-start text-uppercase" style="color: rgb(0, 170, 255);">Tinh Dầu Xịt Phòng Hoa Hồng</h2>
+                    <p class="chi_tiet_sp"  style="display:block;">sản phẩm tạo hương thơm tự nhiên, mang lại cảm giác tươi mát, sảng khoái.
+                    </p>
+                    <div class="row justify-content-between align-items-center">
+                    <div class="rating">
+                      <span class="star filled">&#9733;</span>
+                      <span class="star filled">&#9733;</span>
+                      <span class="star filled">&#9733;</span>
+                      <span class="star filled">&#9733;</span>
+                      <span class="star filled">&#9733;</span>
+                      <span class="review-count">(26 reviews)</span>
+                    </div>
+                    <div class="col-12 col-md-12">
+                      <p class="product-price mt-3 text-start ">$15
+                        <button class="view-details-btn " onclick="openModal(this)"><img src="../IMAGES/archiveSale/giohang.png" alt="" width="30px" height="30px"></button>
+                      </p>
+                      <label for="color-select-1" style="display:none;">Chọn dung tích:</label>
+                      <select id="color-select-1" style="display:none;">
+                          <option value="100ml">100ml</option>
+                          <option value="200ml">200ml</option>
+                          <option value="300ml">300ml</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+
+              <div class="col-3 col-md-3 px-2 ">
+                <div class="product-item horizontal-product-item" data-category="1000" data-price="15" data-name="Tinh Dầu Xịt Phòng Xả Chanh">
+                    <div class="product-image">
+                        <img src="https://product.hstatic.net/200000485529/product/xit-sa-chanh_7ea0f7230d45416390a8e9d329c0f8b9_master.jpg" class="main-img">
+                        </div>
+                    <h2 class="product-name horizontal-product-item text-start text-uppercase" style="color: rgb(0, 170, 255);">Tinh Dầu Xịt Phòng Xả Chanh</h2>
+                    <p class="chi_tiet_sp"  style="display:block;">sản phẩm tạo hương thơm tự nhiên, mang lại cảm giác tươi mát, sảng khoái.
+                    </p>
+                    <div class="row justify-content-between align-items-center">
+                    <div class="rating">
+                      <span class="star filled">&#9733;</span>
+                      <span class="star filled">&#9733;</span>
+                      <span class="star filled">&#9733;</span>
+                      <span class="star filled">&#9733;</span>
+                      <span class="star filled">&#9733;</span>
+                      <span class="review-count">(12 reviews)</span>
+                    </div>
+                    <div class="col-12 col-md-12">
+                      <p class="product-price mt-3 text-start ">$15
+                        <button class="view-details-btn " onclick="openModal(this)"><img src="../IMAGES/archiveSale/giohang.png" alt="" width="30px" height="30px"></button>
+                      </p>
+                      <label for="color-select-1" style="display:none;">Chọn dung tích:</label>
+                      <select id="color-select-1" style="display:none;">
+                          <option value="100ml">100ml</option>
+                          <option value="200ml">200ml</option>
+                          <option value="300ml">300ml</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+
+              <div class="col-3 col-md-3 px-2 ">
+                <div class="product-item horizontal-product-item" data-category="1000" data-price="15" data-name="Tinh Dầu Xịt Phòng Oải hương">
+                    <div class="product-image">
+                        <img src="https://product.hstatic.net/200000485529/product/xit-oai-huong__2__426baf351c734c68b54dbb3642ec7a73_master.jpg" class="main-img">
+                        </div>
+                    <h2 class="product-name horizontal-product-item text-start text-uppercase" style="color: rgb(0, 170, 255);">Tinh Dầu Xịt Phòng Oải hương</h2>
+                    <p class="chi_tiet_sp"  style="display:block;">sản phẩm tạo hương thơm tự nhiên, mang lại cảm giác tươi mát, sảng khoái.
+                    </p>
+                    <div class="row justify-content-between align-items-center">
+                    <div class="rating">
+                      <span class="star filled">&#9733;</span>
+                      <span class="star filled">&#9733;</span>
+                      <span class="star filled">&#9733;</span>
+                      <span class="star filled">&#9733;</span>
+                      <span class="star ">&#9733;</span>
+                      <span class="review-count">(77 reviews)</span>
+                    </div>
+                    <div class="col-12 col-md-12">
+                      <p class="product-price mt-3 text-start ">$15
+                        <button class="view-details-btn " onclick="openModal(this)"><img src="../IMAGES/archiveSale/giohang.png" alt="" width="30px" height="30px"></button>
+                      </p>
+                      <label for="color-select-1" style="display:none;">Chọn dung tích:</label>
+                      <select id="color-select-1" style="display:none;">
+                          <option value="100ml">100ml</option>
+                          <option value="200ml">200ml</option>
+                          <option value="300ml">300ml</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-3 col-md-3 px-2 ">
+                <div class="product-item horizontal-product-item" data-category="1000" data-price="18" data-name="Tinh Dầu Xịt Khoáng Khuẩn Quế">
+                    <div class="product-image">
+                        <img src="https://vinahcgroup.com/wp-content/uploads/2020/08/100ml_Que-copy-525x525.png" class="main-img">
+                        </div>
+                    <h2 class="product-name horizontal-product-item text-start text-uppercase" style="color: rgb(0, 170, 255);">Tinh Dầu Xịt Khoáng Khuẩn Quế</h2>
+                    <p class="chi_tiet_sp"  style="display:block;">sản phẩm tạo hương thơm tự nhiên, mang lại cảm giác tươi mát, sảng khoái.
+                    </p>
+                    <div class="row justify-content-between align-items-center">
+                    <div class="rating">
+                      <span class="star filled">&#9733;</span>
+                      <span class="star filled">&#9733;</span>
+                      <span class="star filled">&#9733;</span>
+                      <span class="star filled">&#9733;</span>
+                      <span class="star filled">&#9733;</span>
+                      <span class="review-count">(22 reviews)</span>
+                    </div>
+                    <div class="col-12 col-md-12">
+                      <p class="product-price mt-3 text-start ">$18
+                        <button class="view-details-btn " onclick="openModal(this)"><img src="../IMAGES/archiveSale/giohang.png" alt="" width="30px" height="30px"></button>
+                      </p>
+                      <label for="color-select-1" style="display:none;">Chọn dung tích:</label>
+                      <select id="color-select-1" style="display:none;">
+                          <option value="100ml">100ml</option>
+                          <option value="200ml">200ml</option>
+                          <option value="300ml">300ml</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+
+              <div class="col-3 col-md-3 px-2 ">
+                <div class="product-item horizontal-product-item" data-category="1000" data-price="18" data-name="Tinh Dầu Xịt Khoáng Khuẩn Cam">
+                    <div class="product-image">
+                        <img src="https://vinahcgroup.com/wp-content/uploads/2020/08/XIT-KHANG-KHUAN-05.png" class="main-img">
+                        </div>
+                    <h2 class="product-name horizontal-product-item text-start text-uppercase" style="color: rgb(0, 170, 255);">Tinh Dầu Khoáng Khuẩn Cam</h2>
+                    <p class="chi_tiet_sp"  style="display:block;">sản phẩm tạo hương thơm tự nhiên, mang lại cảm giác tươi mát, sảng khoái.
+                    </p>
+                    <div class="row justify-content-between align-items-center">
+                    <div class="rating">
+                      <span class="star filled">&#9733;</span>
+                      <span class="star filled">&#9733;</span>
+                      <span class="star filled">&#9733;</span>
+                      <span class="star filled">&#9733;</span>
+                      <span class="star">&#9733;</span>
+                      <span class="review-count">(58 reviews)</span>
+                    </div>
+                    <div class="col-12 col-md-12">
+                      <p class="product-price mt-3 text-start ">$18
+                        <button class="view-details-btn " onclick="openModal(this)"><img src="../IMAGES/archiveSale/giohang.png" alt="" width="30px" height="30px"></button>
+                      </p>
+                      <label for="color-select-1" style="display:none;">Chọn dung tích:</label>
+                      <select id="color-select-1" style="display:none;">
+                          <option value="100ml">100ml</option>
+                          <option value="200ml">200ml</option>
+                          <option value="300ml">300ml</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+
+
+              <div class="col-3 col-md-3 px-2 ">
+                <div class="product-item horizontal-product-item" data-category="1000" data-price="18" data-name="Tinh Dầu Xịt Khoáng Khuẩn Oải hương">
+                    <div class="product-image">
+                        <img src=" https://vinahcgroup.com/wp-content/uploads/2020/08/100ml_Oaihuong-copy-525x525.png" class="main-img">
+                        </div>
+                    <h2 class="product-name horizontal-product-item text-start text-uppercase" style="color: rgb(0, 170, 255);">Tinh Dầu Khoáng Khuẩn Oải hương</h2>
+                    <p class="chi_tiet_sp"  style="display:block;">sản phẩm tạo hương thơm tự nhiên, mang lại cảm giác tươi mát, sảng khoái.
+                    </p>
+                    <div class="row justify-content-between align-items-center">
+                    <div class="rating">
+                      <span class="star filled">&#9733;</span>
+                      <span class="star filled">&#9733;</span>
+                      <span class="star filled">&#9733;</span>
+                      <span class="star filled">&#9733;</span>
+                      <span class="star filled">&#9733;</span>
+                      <span class="review-count">(11 reviews)</span>
+                    </div>
+                    <div class="col-12 col-md-12">
+                      <p class="product-price mt-3 text-start ">$18
+                        <button class="view-details-btn " onclick="openModal(this)"><img src="../IMAGES/archiveSale/giohang.png" alt="" width="30px" height="30px"></button>
+                      </p>
+                      <label for="color-select-1" style="display:none;">Chọn dung tích:</label>
+                      <select id="color-select-1" style="display:none;">
+                          <option value="100ml">100ml</option>
+                          <option value="200ml">200ml</option>
+                          <option value="300ml">300ml</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-3 col-md-3 px-2 ">
+                <div class="product-item horizontal-product-item" data-category="1000" data-price="17" data-name="Tinh Dầu Xịt Khử Mùi Giày">
+                    <div class="product-image">
+                        <img src="https://vinahcgroup.com/wp-content/uploads/2020/08/XIT-KHANG-KHUAN-06-768x768.png" class="main-img">
+                        </div>
+                    <h2 class="product-name horizontal-product-item text-start text-uppercase" style="color: rgb(0, 170, 255);">Tinh Dầu Xịt Khử Mùi Giày</h2>
+                    <p class="chi_tiet_sp"  style="display:block;">sản phẩm tạo hương thơm tự nhiên, mang lại cảm giác tươi mát, sảng khoái.
+                    </p>
+                    <div class="row justify-content-between align-items-center">
+                    <div class="rating">
+                      <span class="star filled">&#9733;</span>
+                      <span class="star filled">&#9733;</span>
+                      <span class="star filled">&#9733;</span>
+                      <span class="star filled">&#9733;</span>
+                      <span class="star filled">&#9733;</span>
+                      <span class="review-count">(25 reviews)</span>
+                    </div>
+                    <div class="col-12 col-md-12">
+                      <p class="product-price mt-3 text-start ">$17
+                        <button class="view-details-btn " onclick="openModal(this)"><img src="../IMAGES/archiveSale/giohang.png" alt="" width="30px" height="30px"></button>
+                      </p>
+                      <label for="color-select-1" style="display:none;">Chọn dung tích:</label>
+                      <select id="color-select-1" style="display:none;">
+                          <option value="100ml">100ml</option>
+                          <option value="200ml">200ml</option>
+                          <option value="300ml">300ml</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+
+
+              <div class="col-3 col-md-3 px-2 ">
+                <div class="product-item horizontal-product-item" data-category="1000" data-price="19" data-name="Tinh Dầu Thơm Ngọc Lan Tây">
+                    <div class="product-image">
+                        <img src=" https://tinhdaumocmay.com/wp-content/uploads/2020/11/tinh-dau-ngoc-lan-tayngoc-lan-tay-9424-1.png" class="main-img">
+                        </div>
+                    <h2 class="product-name horizontal-product-item text-start text-uppercase" style="color: rgb(0, 170, 255);">Tinh Dầu Thơm Ngọc Lan Tây</h2>
+                    <p class="chi_tiet_sp"  style="display:block;">sản phẩm tạo hương thơm tự nhiên, mang lại cảm giác tươi mát, sảng khoái.
+                    </p>
+                    <div class="row justify-content-between align-items-center">
+                    <div class="rating">
+                      <span class="star filled">&#9733;</span>
+                      <span class="star filled">&#9733;</span>
+                      <span class="star filled">&#9733;</span>
+                      <span class="star filled">&#9733;</span>
+                      <span class="star">&#9733;</span>
+                      <span class="review-count">(123 reviews)</span>
+                    </div>
+                    <div class="col-12 col-md-12">
+                      <p class="product-price mt-3 text-start ">$19
+                        <button class="view-details-btn " onclick="openModal(this)"><img src="../IMAGES/archiveSale/giohang.png" alt="" width="30px" height="30px"></button>
+                      </p>
+                      <label for="color-select-1" style="display:none;">Chọn dung tích:</label>
+                      <select id="color-select-1" style="display:none;">
+                          <option value="100ml">100ml</option>
+                          <option value="200ml">200ml</option>
+                          <option value="300ml">300ml</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            
+
+        </div>
+</div>
+       
+<!-- modal chi tiết sản phẩm -->
+
+<div id="productModal" class="modal mt-5" tabindex="-1" aria-labelledby="ModalFormLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-lg" id="chitiet_sp">
+    <div id="content-product" class="modal-content">
+      <div class="content-header" id="content-header-product">
+        <div class="row">
+            <h4 class="col-12 col-sm-12 ">Chi tiết sản phẩm</h4>
+            <span class="col-1 col-sm-1" id="dong_modal" onclick="closeModal()">&times;</span>
+        </div>
+    </div>
+      <div class="modal-body" id="product-modal-body">
+        <div class="myformm">
+          <form action="">
+            <div style="display: flex; gap: 20px;">
+              <div class="row ">
+                <div class="col-6 col-sm-6">
+                  <div style="flex: 1;">
+                    <h2 class="modal-product-name" style="display:none;"></h2>
+                    <img class="modal-product-image" src="" alt="Product Image" width="100%">
+                    <p class="modal-product-price hidden-description" style="display:none;"></p>
+                </div>
+                </div>
+                <div class="col-6 col-sm-6">
+                  <div class="product-description" style="flex: 1;">
+
+                    <ul class="product-info">
+                      <li><strong>Thương hiệu:</strong> Chủ sở hữu thương hiệu: AURA CANDLE<span></span></li>
+                      <li><strong>Thành phần</strong> Tinh dầu thiên nhiên, Nước hoặc dung môi, Cồn,...</li>
+                      <li><strong>Công dụng:</strong> <span ></span>Khử mùi và làm sạch không khí, có thể chống côn trùng,... </li> 
+                    </ul>
+
+                    <form>
+                        <label for="modal-color-select">Chọn dung tích</label>
+                        <select id="modal-color-select" class="form-control">
+                          <option value="100ml" data-price="12">$12 - 100ml</option>
+                          <option value="200ml" data-price="20">$20 - 200ml</option>
+                          <option value="300ml" data-price="30">$30 - 300ml</option>
+                        </select>
+                        
+                        <label for="quantity-select">Chọn số lượng</label>
+                        <select id="quantity-select" class="form-control" onchange="updateTotalPrice()">
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                        </select>
+                    </form>
+
+                    <p id="total-price" class="text-center mt-4" style="color: #040202;">Tổng: <span id="total-span">0</span></p>
+                    
+                    <div class="row">
+                        <div class="col-12 col-sm-12">
+                         <button class="add-to-cart-btnn" onclick="addToCartFromModal()" style="background-color: rgb(245, 119, 30);">Thêm vào giỏ hàng</button>
+                        </div>
+                    </div>
+                </div>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+      <div class="modal-footer" style="border:0;">
+        <!-- Chứa nút đóng modal nếu cần -->
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- footer -->
+<footer>
+  <div class="footer-container">
+    <div class="footer-section company-info">
+      <h3>AURA CANDLE</h3>
+      <p>Aura Candle được phân phối độc quyền bởi Công ty TNHH ABC Home & Skin</p>
+      <p>Tòa nhà A, 123 Nam Kỳ Khởi Nghĩa, Phường 7, Quận 3, TP.HCM, Việt Nam</p>
+      <p>+84 123 456 111</p>
+      <p>Hotline: 1900 12 34 56</p>
+      <p>Email: cskh12345@gmail.com.vn</p>
+      <p>©2018 - Bản quyền thuộc về <strong>AURA CANDLE</strong> | Cung cấp bởi QuocKhanh</p>
+    </div>
+
+    <div class="footer-section policies">
+      <h3>Chính sách</h3>
+      <ul>
+        <li><a href="#">Trung tâm hỗ trợ khách hàng</a></li>
+        <li><a href="#">Kiểm tra đơn hàng</a></li>
+        <li><a href="#">Chính sách vận chuyển, giao nhận</a></li>
+        <li><a href="#">Chính sách đổi trả, hoàn tiền</a></li>
+        <li><a href="#">Chính sách bảo mật thông tin khách hàng</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-section news">
+      <h3>Tin tức nổi bật</h3>
+      <div class="news-item">
+        <a href="#">
+          <p>QUÀ Ý NGHĨA TRI ÂN THẦY CÔ NGÀY NHÀ GIÁO VIỆT...</p>
+          <span>16/11/2024</span>
+        </a>
+      </div>
+      <div class="news-item">
+        <a href="#">
+          <p>TRẢI NGHIỆM HƯƠNG...</p>
+          <span>15/11/2024</span>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-subscribe">
+    <div class="subscribe-text">
+      <h3>Đăng ký nhận tin khuyến mãi</h3>
+      <p>Hãy gửi chúng tôi địa chỉ email của bạn, chúng tôi sẽ gửi cho bạn những ưu đãi đặc biệt.</p>
+    </div>
+    <div class="subscribe-form">
+      <input type="email" placeholder="Email của bạn">
+      <button>Đăng ký</button>
+    </div>
+  </div>
+</footer>
+  
+
+ <!-- tìm kiếm -->
+  <script src="../JS/timkiem.js"></script>
+  <!-- thêm sản phẩm -->
+<script src="../JS/themsp.js"></script>
+
+<!-- modal chi tiết sản phẩm -->
+<script src="../JS/modal_chitiet.js"></script>
+
+<!-- thêm sản phẩm khi ở trong modal vô giỏ -->
+<script src="../JS/them_sp.js"></script>
+
+</body>
+</html>
+<script>
+  const toggles = document.querySelectorAll('.toggle-menu');
+
+  toggles.forEach(toggle => {
+      toggle.addEventListener('click', function () {
+  
+          const submenu = this.nextElementSibling;
+  
+          document.querySelectorAll('.submenu').forEach(menu => {
+              if (menu !== submenu) {
+                  menu.style.display = 'none';
+              }
+          });
+  
+          submenu.style.display = submenu.style.display === 'block' ? 'none' : 'block';
+      });
+  });
+  
+  document.addEventListener('click', function (e) {
+      if (!e.target.closest('.nav-item')) {
+          document.querySelectorAll('.submenu').forEach(menu => {
+              menu.style.display = 'none';
+          });
+      }
+  });
+  
+</script>

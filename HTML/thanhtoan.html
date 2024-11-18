@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Thanh Toán</title>
+    <link rel="stylesheet" href="../CSS/bootstrap.min.css">
+    <link rel="stylesheet" href="../CSS/thanhtoan.css">
+    <script src="../JS/jquery-3.7.1.min.js"></script>
+    <script src="../JS/bootstrap.bundle.min.js"></script>
+    <style>
+        /* Đảm bảo body chiếm toàn bộ chiều cao */
+        html, body {
+            height: 100%;
+            margin: 0;
+        }
+
+        .container {
+            height: auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: rgb(243, 171, 36);
+        }
+
+        .form-container {
+            width: 100%;
+            max-width: 600px; /* Đảm bảo chiều rộng tối đa của form */
+            padding: 20px;
+            background-color: #f8f9fa;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Left Column - Form -->
+    <div class="container py-5">
+        <div class="form-container shadow-sm p-4 rounded bg-light">
+            <h2 class="text-center text-bg-warning py-4 mb-4" style="font-size: 2rem; font-weight: bold; color:orangered; text-transform: uppercase; letter-spacing: 2px;">
+                THÔNG TIN THANH TOÁN
+            </h2>
+            <form id="checkout-form">
+                <!-- Contact Info -->
+                <div class="mb-4">
+                    <label for="email" class="form-label">Email</label>
+                    <input type="email" class="form-control" id="email" placeholder="Email" required>
+                </div>
+
+                <!-- Shipping Info -->
+                <div class="mb-4">
+                    <h4 class="mb-3">THÔNG TIN CHI TIẾT</h4>
+                    <div class="row mb-3">
+                        <div class="col-md-12">
+                            <label for="country" class="form-label">Country/Region</label>
+                            <select class="form-select" id="country">
+                                <option selected>An Giang</option>
+                                <option value="1">Long An</option>
+                                <option value="2">TP. Hồ Chí Minh</option>
+                                <option value="3">Hà Nội</option>
+                                <option value="2">Tiền Giang</option>
+                            </select>
+                        </div>
+                    </div>
+    
+                    <div class="row mb-3">
+                        <div class="col-md-6">
+                            <label for="firstName" class="form-label">First Name</label>
+                            <input type="text" class="form-control" id="firstName" placeholder="First name" required>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="lastName" class="form-label">Last Name</label>
+                            <input type="text" class="form-control" id="lastName" placeholder="Last name" required>
+                        </div>
+                    </div>
+    
+                    <div class="mb-3">
+                        <label for="address" class="form-label">Address</label>
+                        <input type="text" class="form-control" id="address" placeholder="Address" required>
+                    </div>
+    
+                    <div class="mb-3">
+                        <label for="apartment" class="form-label">Apartment, suite, etc. (optional)</label>
+                        <input type="text" class="form-control" id="apartment" placeholder="Apartment, suite, etc.">
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="phone" class="form-label">Phone</label>
+                        <input type="tel" class="form-control" id="phone" placeholder="Phone" required>
+                    </div>
+                </div>
+
+                <!-- Payment Info -->
+                <div class="mb-4">
+                    <h4 class="mb-3">Thông Tin Thanh Toán</h4>
+                    <div class="row mb-3">
+                        <div class="col-md-6">
+                            <label for="cardNumber" class="form-label">Card Number</label>
+                            <input type="text" class="form-control" id="cardNumber" placeholder="Card Number" required>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="expiryDate" class="form-label">Expiry Date</label>
+                            <input type="month" class="form-control" id="expiryDate" required>
+                        </div>
+                    </div>
+
+                    <div class="row mb-3">
+                        <div class="col-md-6">
+                            <label for="cardHolder" class="form-label">Card Holder Name</label>
+                            <input type="text" class="form-control" id="cardHolder" placeholder="Cardholder Name" required>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="bankName" class="form-label">Bank Name</label>
+                            <input type="text" class="form-control" id="bankName" placeholder="Bank Name" required>
+                        </div>
+                    </div>
+
+                    <div class="row mb-3">
+                        <div class="col-md-6">
+                            <label for="cvv" class="form-label">CVV</label>
+                            <input type="text" class="form-control" id="cvv" placeholder="CVV" required>
+                        </div>
+                    </div>
+                </div>
+
+                <button type="submit" class="btn btn-success w-100">XÁC NHẬN THANH TOÁN</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="../JS/thanhtoan.js"></script>
+</body>
+</html>
