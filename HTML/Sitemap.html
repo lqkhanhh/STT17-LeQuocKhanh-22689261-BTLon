@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Giới thiệu</title>
+    <link rel="stylesheet" href="../CSS/bootstrap.min.css">
+    <link rel="stylesheet" href="../CSS/header.css">
+    <link rel="stylesheet" href="../CSS/footer.css">
+    <link rel="stylesheet" href="../CSS/modal_dk.css">
+    <link rel="stylesheet" href="../CSS/modal_dn.css">
+    <link rel="stylesheet" href="../CSS/sanpham.css">
+    <link rel="stylesheet" href="../CSS/modal_chi_tiet_san_pham.css">
+    <script src="../JS/jquery-3.7.1.min.js"></script>
+    <script src="../JS/bootstrap.bundle.min.js"></script>
+    <script src="../JS/nav.js"></script>
+    <script src="../JS/table.js"></script>
+    <script src="../JS/passwordToggle.js"></script>
+    <script src="../JS/login.js"></script>
+    <script src="../JS/createAccount.js"></script>
+    <script src="../JS/modalSwitch.js"></script>
+
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+        .container {
+            background: #ffffff;
+            border-radius: 8px;
+            padding: 40px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+            margin-top: 40px;
+        }
+        h1 {
+            text-align: center;
+            color: #ff5722;
+            font-weight: bold;
+            text-transform: uppercase;
+            margin-bottom: 30px;
+        }
+        .list-group-item {
+            background: #ffffff;
+            border: none;
+        }
+        .list-group-item a {
+            text-decoration: none;
+            font-weight: bold;
+            color: #007bff;
+        }
+        .list-group-item a:hover {
+            color: #0056b3;
+            text-decoration: underline;
+        }
+        ul.list-unstyled li a {
+            font-weight: normal;
+            font-size: 0.9rem;
+        }
+        ul.list-unstyled li a:hover {
+            color: #6c757d;
+        }
+        @media (max-width: 768px) {
+            .container {
+                padding: 20px;
+            }
+            h1 {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+    
+</head>
+<body>
+    <div class="container">
+        <h1>Sitemap</h1>
+        <div class="list-group">
+            <!-- Nến thơm -->
+            <div class="list-group-item">
+                <a href="/nen-thom.html">Nến thơm</a>
+                <ul class="list-unstyled ms-4">
+                    <li><a href="../HTML/Nenhu.html">Nến hũ</a></li>
+                    <li><a href="../HTML/NenLyTron.html">Nến Ly Tròn</a></li>
+                    <li><a href="../HTML/NenLyVuong.html">Nến Ly Vuông</a></li>
+                    <li><a href="../HTML/NenMini.html">Nến Mini</a></li>
+                </ul>
+            </div>
+            
+            <!-- Tinh dầu -->
+            <div class="list-group-item">
+                <a href="/tinh-dau.html">Tinh dầu</a>
+                <ul class="list-unstyled ms-4">
+                    <li><a href="../HTML/TinhDauXit.html">Tinh dầu xịt</a></li>
+                    <li><a href="../HTML/TinhDauGel.html">Tinh dầu gel</a></li>
+                </ul>
+            </div>
+            
+            <!-- Set quà -->
+            <div class="list-group-item">
+                <a href="/set-qua.html">Set quà</a>
+                <ul class="list-unstyled ms-4">
+                    <li><a href="../HTML/SetQua2Nen.html">Set quà 2 nến</a></li>
+                    <li><a href="../HTML/SetQua3Nen.html">Set quà 3 nến</a></li>
+                </ul>
+            </div>
+            
+            <!-- Phụ kiện -->
+            <div class="list-group-item">
+                <a href="../HTML/PhuKien.html">Phụ kiện</a>
+            </div>
+            
+            <!-- Sale -->
+            <div class="list-group-item">
+                <a href="../HTML/Sale.html">Sale</a>
+            </div>
+            
+            <!-- Sitemap -->
+            <div class="list-group-item">
+                <a href="../HTML/Sitemap.html">Sitemap</a>
+            </div>
+            
+            <!-- Giới thiệu -->
+            <div class="list-group-item">
+                <a href="../HTML/GioiThieu.html">Giới thiệu</a>
+            </div>
+        </div>
+    </div>
+
+</footer>
+  
+
+ <!-- tìm kiếm -->
+  <script src="../JS/timkiem.js"></script>
+  <!-- thêm sản phẩm -->
+<script src="../JS/themsp.js"></script>
+
+<!-- modal chi tiết sản phẩm -->
+<script src="../JS/modal_chitiet.js"></script>
+
+<!-- thêm sản phẩm khi ở trong modal vô giỏ -->
+<script src="../JS/them_sp.js"></script>
+
+</body>
+</html>
+<script>
+  const toggles = document.querySelectorAll('.toggle-menu');
+
+  toggles.forEach(toggle => {
+      toggle.addEventListener('click', function () {
+  
+          const submenu = this.nextElementSibling;
+  
+          document.querySelectorAll('.submenu').forEach(menu => {
+              if (menu !== submenu) {
+                  menu.style.display = 'none';
+              }
+          });
+  
+          submenu.style.display = submenu.style.display === 'block' ? 'none' : 'block';
+      });
+  });
+  
+  document.addEventListener('click', function (e) {
+      if (!e.target.closest('.nav-item')) {
+          document.querySelectorAll('.submenu').forEach(menu => {
+              menu.style.display = 'none';
+          });
+      }
+  });
+  
+</script>
+
+
